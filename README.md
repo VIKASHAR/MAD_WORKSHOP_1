@@ -18,14 +18,14 @@ Step 4: Working with the activity_main2.xml File
 Step 5: Working with the MainActivity2 File
 
 ## PROGRAM:
-In activity_main.xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+## In activity_main.xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -165,54 +165,54 @@ In activity_main.xml
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ## In MainActivity.java
-package com.example.workshop;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-
-public class MainActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button nextActivityButton = findViewById(R.id.button);
-        nextActivityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText nameEditText = findViewById(R.id.nameTextView);
-                EditText ageEditText = findViewById(R.id.age);
-                EditText emailEditText = findViewById(R.id.EmailAddress);
-                EditText contactNumberEditText = findViewById(R.id.Phone);
-
-                String name = nameEditText.getText().toString();
-                String age = ageEditText.getText().toString();
-                String email = emailEditText.getText().toString();
-                String contactNumber = contactNumberEditText.getText().toString();
-
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                intent.putExtra("name", name);
-                intent.putExtra("age", age);
-                intent.putExtra("email", email);
-                intent.putExtra("contactNumber", contactNumber);
-                startActivity(intent);
-            }
-        });
+    package com.example.workshop;
+    
+    import androidx.appcompat.app.AppCompatActivity;
+    
+    import android.content.Intent;
+    import android.os.Bundle;
+    import android.view.View;
+    import android.widget.Button;
+    import android.widget.EditText;
+    
+    public class MainActivity extends AppCompatActivity {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+    
+            Button nextActivityButton = findViewById(R.id.button);
+            nextActivityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EditText nameEditText = findViewById(R.id.nameTextView);
+                    EditText ageEditText = findViewById(R.id.age);
+                    EditText emailEditText = findViewById(R.id.EmailAddress);
+                    EditText contactNumberEditText = findViewById(R.id.Phone);
+    
+                    String name = nameEditText.getText().toString();
+                    String age = ageEditText.getText().toString();
+                    String email = emailEditText.getText().toString();
+                    String contactNumber = contactNumberEditText.getText().toString();
+    
+                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("age", age);
+                    intent.putExtra("email", email);
+                    intent.putExtra("contactNumber", contactNumber);
+                    startActivity(intent);
+                }
+            });
+        }
     }
-}
 ## In activity_main2.xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/textView5"
