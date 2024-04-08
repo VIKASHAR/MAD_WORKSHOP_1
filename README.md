@@ -338,3 +338,13 @@ Step 5: Working with the MainActivity2 File
         }
     }
 ## OUTPUT:
+
+![WhatsApp Image 2024-04-08 at 09 39 10_7a3aa242](https://github.com/VIKASHAR/MAD_WORKSHOP_1/assets/119405655/d4eff266-a227-4031-a71e-43c7f8f8d5bf)
+
+![WhatsApp Image 2024-04-08 at 09 39 10_227e40ef](https://github.com/VIKASHAR/MAD_WORKSHOP_1/assets/119405655/d7089546-2372-4e04-be49-89710144a8e0)
+
+
+## RESULT
+    Thus a Simple Android Application to pass the data between the activities using Intent in Android Studio is developed and executed successfully.
+
+
